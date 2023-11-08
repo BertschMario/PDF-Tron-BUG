@@ -44,22 +44,9 @@ export class WebViewerComponent implements AfterViewInit {
     const { PDFNet } = this.instance.Core;
     console.log('INIT PDFNET');
     await PDFNet.initialize();
+
+    // Should be executed if everything works correctly
     console.log('PDFNET INITIALIZED');
-
-    /*
-    The code gets Stuck at "await PDFNet.initialize();"
-
-    Here are all tested devices:
-
-    Webviewer NOT works on:
-    - iPad (9. Generation) => iPadOS-Version 16.6.1
-    - iPhone 11 Pro Max => iOS-Version 16.6.1
-
-    Webviewer works on:
-    - iPhone 11 => iOS-Version 17.0.3
-    - Windows => 10, 11
-    - Linux => Ubuntu, Arch, Manjaro
-    - Android => 11, 12, 13
-     */
+    alert('PDFNet.initialize worked')
   }
 }
